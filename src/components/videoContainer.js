@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import VideoCards from "./common/videoCards";
+import VideoCards, { AdVideoCard } from "./common/videoCards";
 import { API_SET } from "../utils/url";
 import { Link } from "react-router-dom";
 
@@ -18,10 +18,11 @@ const VideoContainer = () => {
 
   return (
     <div className="flex flex-wrap">
+      {videos.length > 0 && <AdVideoCard info={videos[0]}/>}
       {videos.map((video) => {
         return (
-          <Link to={"/watch?v=" + video.id} className="cursor-pointer">
-            <VideoCards key={video.id} info={video} />
+          <Link key={video.id} to={"/watch?v=" + video.id} className="cursor-pointer">
+            <VideoCards info={video} />
           </Link>
         );
       })}
