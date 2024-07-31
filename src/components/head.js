@@ -17,11 +17,9 @@ const Head = () => {
         <img className='h-11 mx-2 cursor-pointer' alt='menu-icon' src={ICON_SET.MENU_ICON_URL} onClick={handleToggleMenu}/>
         <img className='h-11' alt='youtube-icon' src={ICON_SET.YOUTUBE_ICON_URL}/>
       </div>
-      <div className='col-span-9 text-center'>
+      <div className='col-span-9 text-center flex'>
         <input className='w-1/2 border border-gray-300 p-2 rounded-l-full' type='text'/>
-        <button className='border border-gray-400 px-5 py-2 rounded-r-full bg-gray-100'>
-          Search
-        </button>
+        <img src={ICON_SET.SEARCH_ICON_URL} alt='search-icon' className='cursor-pointer border border-gray-400 px-2 py-1 rounded-r-full bg-gray-100 h-12'/>
       </div>
       <div className='col-span-2'>
         <img className='h-11' alt='user-icon' src={ICON_SET.USER_ICON_URL}/>

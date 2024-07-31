@@ -6,7 +6,7 @@ export const ICON_SET = {
   USER_ICON_URL:
     "https://www.iconpacks.net/icons/2/free-user-icon-3296-thumb.png",
   SEARCH_ICON_URL:
-    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSyi_CVTmoL1ITHFxQkfLwvj93hcsgA1Olkhg&s",
+    "https://w7.pngwing.com/pngs/403/380/png-transparent-computer-icons-youtube-symbol-information-black-dandelion-circle-symbol-magnifying-glass-thumbnail.png",
   HOME_ICON_URL:
     "https://e7.pngegg.com/pngimages/377/806/png-clipart-font-awesome-computer-icons-house-house-angle-logo.png",
   SHORTS_ICON_URL:
