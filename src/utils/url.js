@@ -30,3 +30,7 @@ export const ICON_SET = {
   DOWNLOAD_ICON_URL:
     "https://png.pngtree.com/png-clipart/20190921/original/pngtree-file-download-icon-png-image_4719240.jpg",
 };
+
+export const API_SET = {
+  GET_POPULAR_VIDEOS : "https://youtube.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatistics&chart=mostPopular&regionCode=US&key=AIzaSyArhcPvyDb6enstiXjK_GsjKExN9uASvLI",
+}

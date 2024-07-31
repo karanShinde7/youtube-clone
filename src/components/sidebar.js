@@ -1,9 +1,17 @@
 import React from "react";
-import { ICON_SET } from "../url";
+import { ICON_SET } from "../utils/url";
 import ListItem from "./common/list-item";
 import ListHeader from "./common/list-header";
+import { useSelector } from "react-redux";
 
 const Sidebar = () => {
+
+  const appState = useSelector(state =>  state.app)
+  const {isMenuOpen} = appState;
+
+  if(!isMenuOpen) 
+    return;
+
   return (
     <div className="p-5 shadow-lg w-56">
       <ul className="border-b-2 border-gray-300 my-4">

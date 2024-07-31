@@ -1,10 +1,10 @@
 import React from 'react'
-import ButtonList from './buttonList'
+import ButtonList from './common/buttonList'
 import VideoContainer from './videoContainer'
 
 const Main = () => {
   return (
-    <div className='col-span-10'>
+    <div>
       <ButtonList/>
       <VideoContainer/>
     </div>

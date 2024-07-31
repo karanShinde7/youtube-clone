@@ -1,11 +1,20 @@
 import React from 'react'
-import { ICON_SET } from '../url'
+import { ICON_SET } from '../utils/url'
+import { useDispatch } from 'react-redux'
+import {toggleMenu} from '../redux/slice/appSlice'
 
 const Head = () => {
+
+  const dispatch = useDispatch();
+
+  const handleToggleMenu = () => {
+    dispatch(toggleMenu());
+  }
+
   return (
     <div className='grid grid-flow-col p-4 m-2 shadow-lg'>
       <div className='flex col-span-1'>
-        <img className='h-11 mx-2' alt='menu-icon' src={ICON_SET.MENU_ICON_URL}/>
+        <img className='h-11 mx-2 cursor-pointer' alt='menu-icon' src={ICON_SET.MENU_ICON_URL} onClick={handleToggleMenu}/>
         <img className='h-11' alt='youtube-icon' src={ICON_SET.YOUTUBE_ICON_URL}/>
       </div>
       <div className='col-span-9 text-center'>
