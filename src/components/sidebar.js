@@ -3,23 +3,24 @@ import { ICON_SET } from "../utils/url";
 import ListItem from "./common/list-item";
 import ListHeader from "./common/list-header";
 import { useSelector } from "react-redux";
+import { Link } from "react-router-dom";
 
 const Sidebar = () => {
+  const appState = useSelector((state) => state.app);
+  const { isMenuOpen } = appState;
 
-  const appState = useSelector(state =>  state.app)
-  const {isMenuOpen} = appState;
-
-  if(!isMenuOpen) 
-    return;
+  if (!isMenuOpen) return;
 
   return (
-    <div className="p-5 shadow-lg w-56">
+    <div className="p-5 shadow-lg w-[15%]">
       <ul className="border-b-2 border-gray-300 my-4">
-        <ListItem
-          url={ICON_SET.HOME_ICON_URL}
-          alt="home-icon"
-          itemName={"Home"}
-        />
+        <Link to="/">
+          <ListItem
+            url={ICON_SET.HOME_ICON_URL}
+            alt="home-icon"
+            itemName={"Home"}
+          />
+        </Link>
         <ListItem
           url={ICON_SET.SHORTS_ICON_URL}
           alt="short-icon"

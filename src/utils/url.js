@@ -32,5 +32,5 @@ export const ICON_SET = {
 };
 
 export const API_SET = {
-  GET_POPULAR_VIDEOS : "https://youtube.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatistics&chart=mostPopular&regionCode=US&key=AIzaSyArhcPvyDb6enstiXjK_GsjKExN9uASvLI",
+  GET_POPULAR_VIDEOS : "https://youtube.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatistics&chart=mostPopular&maxResults=50&regionCode=IN&key=AIzaSyArhcPvyDb6enstiXjK_GsjKExN9uASvLI",
 }
