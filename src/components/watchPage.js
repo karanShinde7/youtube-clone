@@ -2,34 +2,33 @@ import React, { useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { closeMenu } from "../redux/slice/appSlice";
 import { useSearchParams } from "react-router-dom";
+import CommentsContainer from "./commentsContainer";
 
 const WatchPage = () => {
   const dispatch = useDispatch();
   const [searchParam] = useSearchParams();
-  console.log(searchParam.get("v"));
-
-  const getVideo = async () => {
-    const videoDetails = await fetch();
-    const videoJson = videoDetails.json();
-  };
 
   useEffect(() => {
     dispatch(closeMenu());
-    // getVideo()
   }, []);
 
   return (
-    <div className="px-5">
-      <iframe
-        width="1100"
-        height="500"
-        src={"https://www.youtube.com/embed/"+searchParam.get("v")}
-        title="YouTube video player"
-        frameBorder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        referrerPolicy="strict-origin-when-cross-origin"
-        allowFullScreen
-      ></iframe>
+    <div className="flex w-[100%] container px-20">
+      <div className="p-5 w-[80%]">
+        <iframe
+          className="rounded-2xl"
+          width="900"
+          height="500"
+          src={"https://www.youtube.com/embed/" + searchParam.get("v")}
+          title="YouTube video player"
+          frameBorder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerPolicy="strict-origin-when-cross-origin"
+          allowFullScreen
+        ></iframe>
+        <CommentsContainer />
+      </div>
+      <div className="p-5 w-[20%]"> Suggestion List</div>
     </div>
   );
 };

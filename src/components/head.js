@@ -44,16 +44,16 @@ const Head = () => {
   };
 
   return (
-    <div className="grid grid-flow-col p-4 m-2 shadow-lg">
+    <div className="grid grid-flow-col p-1 m-1 shadow-lg">
       <div className="flex col-span-1">
         <img
-          className="h-11 mx-2 cursor-pointer"
+          className="h-10 mx-2 cursor-pointer"
           alt="menu-icon"
           src={ICON_SET.MENU_ICON_URL}
           onClick={handleToggleMenu}
         />
         <img
-          className="h-11"
+          className="h-10"
           alt="youtube-icon"
           src={ICON_SET.YOUTUBE_ICON_URL}
         />
@@ -64,13 +64,13 @@ const Head = () => {
           onChange={(e) => setSearchQuery(e.target.value)}
           onFocus={() => setShowSuggestions(true)}
           onBlur={() => setShowSuggestions(false)}
-          className="w-1/2 border border-gray-300 px-4 py-2 rounded-l-full"
+          className="w-1/2 border border-gray-300 px-4 h-10 rounded-l-full"
           type="text"
         />
         <img
           src={ICON_SET.SEARCH_ICON_URL}
           alt="search-icon"
-          className="cursor-pointer border border-gray-400 px-2 py-1 rounded-r-full bg-gray-100 h-12"
+          className="cursor-pointer border border-gray-400 px-2 py-1 rounded-r-full bg-gray-100 h-10"
         />
         {showSuggestions && suggestion.length > 0 && (
           <div className="absolute rounded-lg w-[34%] shadow-lg bg-white py-1 px-4 mt-12 ml-1 border border-gray-100">
@@ -89,7 +89,7 @@ const Head = () => {
         )}
       </div>
       <div className="col-span-2">
-        <img className="h-11" alt="user-icon" src={ICON_SET.USER_ICON_URL} />
+        <img className="h-10" alt="user-icon" src={ICON_SET.USER_ICON_URL} />
       </div>
     </div>
   );
