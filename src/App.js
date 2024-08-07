@@ -4,6 +4,7 @@ import Body from "./components/body";
 import Head from "./components/head";
 import Main from "./components/main";
 import Demo from "./components/demo";
+import Demo2 from "./components/demo2";
 import WatchPage from "./components/watchPage";
 
 const appRouter = createBrowserRouter([
@@ -21,7 +22,9 @@ const appRouter = createBrowserRouter([
       },
       {
         path: "demo",
-        element: <Demo />,
+        element: <>
+        <Demo />
+        <Demo2 /></>,
       },
     ],
   },
