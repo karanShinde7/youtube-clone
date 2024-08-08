@@ -14,7 +14,7 @@ const Demo2 = () => {
   }, [todos]);
 
   return (
-    <div className="m-4 p-2 w-96 h-96 border border-black">
+    <div className="m-4 p-2 w-096 h-96 border border-black">
       <div className="flex">
         <Todos todos={todos} addTodo={addTodo} />
       </div>
