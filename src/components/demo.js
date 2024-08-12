@@ -26,6 +26,7 @@ const Demo = () => {
     }
     return num - 1;
   };
+  const [counter, setCounter] = useState(5);
 
   const [text, setText] = useState(0);
   const [isDarkTheme, setDarkTheme] = useState(false);
@@ -49,6 +50,16 @@ const Demo = () => {
         isDarkTheme ? "bg-gray-900" : "bg-white"
       }`}
     >
+      <div className="flex">
+      <h1 className="mx-2 px-2 font-bold">{counter}</h1>
+      <button className="p-2 rounded-xl bg-gray-500" onClick={() => {
+         setCounter(counter => counter + 5);
+         setCounter(counter => counter + 5);
+         alert(counter);
+         setCounter(counter => counter + 5);
+         setCounter(counter => counter + 5);
+      }}>Increment</button>
+    </div>
       <div>
         <button
           className={`m-10 p-2 bg-green-500`}
